@@ -1,15 +1,12 @@
 package com.Melexworld.payload.dto;
 
 import com.Melexworld.domain.UserRole;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Email;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class UserDto {
+public class UserDTO {
 
 
     private Long id;

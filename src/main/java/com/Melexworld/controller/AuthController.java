@@ -1,11 +1,10 @@
 package com.Melexworld.controller;
 
 import com.Melexworld.exceptions.UserException;
-import com.Melexworld.payload.dto.UserDto;
+import com.Melexworld.payload.dto.UserDTO;
 import com.Melexworld.payload.response.AuthResponse;
 import com.Melexworld.service.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +20,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> signupHandler(
-            @RequestBody UserDto userDto
+            @RequestBody UserDTO userDto
             ) throws UserException {
 
         return  ResponseEntity.ok(
@@ -31,7 +30,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> loginHandler(
-            @RequestBody UserDto userDto
+            @RequestBody UserDTO userDto
     ) throws UserException {
 
         return  ResponseEntity.ok(

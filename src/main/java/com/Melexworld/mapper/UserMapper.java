@@ -1,14 +1,14 @@
 package com.Melexworld.mapper;
 
 import com.Melexworld.model.User;
-import com.Melexworld.payload.dto.UserDto;
+import com.Melexworld.payload.dto.UserDTO;
 
 public class UserMapper {
 
 
-    public static UserDto toDTO(User savedUser) {
+    public static UserDTO toDTO(User savedUser) {
 
-        UserDto userDto = new UserDto();
+        UserDTO userDto = new UserDTO();
         userDto.setId(savedUser.getId());
         userDto.setFullName(savedUser.getFullName());
         userDto.setEmail(savedUser.getEmail());

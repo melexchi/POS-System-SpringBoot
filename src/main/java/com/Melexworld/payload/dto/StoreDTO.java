@@ -2,8 +2,6 @@ package com.Melexworld.payload.dto;
 
 import com.Melexworld.domain.StoreStatus;
 import com.Melexworld.model.StoreContact;
-import com.Melexworld.model.User;
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -18,7 +16,7 @@ public class StoreDTO {
     private  String brand;
 
 
-    private UserDto storeAdmin;
+    private UserDTO storeAdmin;
 
     private LocalDateTime createdAt;
     private  LocalDateTime updatedAt;

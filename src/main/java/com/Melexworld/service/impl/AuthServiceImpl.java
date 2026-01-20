@@ -5,7 +5,7 @@ import com.Melexworld.domain.UserRole;
 import com.Melexworld.exceptions.UserException;
 import com.Melexworld.mapper.UserMapper;
 import com.Melexworld.model.User;
-import com.Melexworld.payload.dto.UserDto;
+import com.Melexworld.payload.dto.UserDTO;
 import com.Melexworld.payload.response.AuthResponse;
 import com.Melexworld.repository.UserRepository;
 import com.Melexworld.service.AuthService;
@@ -31,7 +31,7 @@ public class AuthServiceImpl implements AuthService {
 
 
     @Override
-    public AuthResponse signup(UserDto userDto) throws UserException {
+    public AuthResponse signup(UserDTO userDto) throws UserException {
         User user = userRepository.findByEmail(userDto.getEmail());
 
         if(user != null){
@@ -68,7 +68,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public AuthResponse login(UserDto userDto) throws UserException {
+    public AuthResponse login(UserDTO userDto) throws UserException {
         String email = userDto.getEmail();
         String password =  userDto.getPassword();
         Authentication authentication = authenticate(email,password);

@@ -3,7 +3,7 @@ package com.Melexworld.controller;
 import com.Melexworld.exceptions.UserException;
 import com.Melexworld.mapper.UserMapper;
 import com.Melexworld.model.User;
-import com.Melexworld.payload.dto.UserDto;
+import com.Melexworld.payload.dto.UserDTO;
 import com.Melexworld.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/profile")
-    public ResponseEntity<UserDto> getUserProfile(
+    public ResponseEntity<UserDTO> getUserProfile(
             @RequestHeader("Authorization") String jwt
     ) throws UserException {
        User user=  userService.getUserFromJwtToken(jwt);
@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserById(
+    public ResponseEntity<UserDTO> getUserById(
             @PathVariable Long id,
             @RequestHeader("Authorization") String jwt
     ) throws UserException, Exception {
