@@ -56,6 +56,6 @@ public class BranchController {
         branchService.deleteBranch(id);
         ApiResponse apiResponse = new ApiResponse();
          apiResponse.setMessage("Branch Deleted Successfully");
-         return ResponseEntity.ok(apiResponse);
+         return ResponseEntity.ok(apiResponse); 
     }
 }
