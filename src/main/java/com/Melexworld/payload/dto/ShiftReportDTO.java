@@ -26,7 +26,7 @@ public class ShiftReportDTO {
 
     private Double netSales;
 
-    private Double totalOrders;
+    private int totalOrders;
 
 
     private UserDTO cashier;
